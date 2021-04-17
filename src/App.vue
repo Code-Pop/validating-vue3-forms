@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-    <SimpleForm />
-
-    <hr>
-
-    <ComponentsForm />
+    <LoginForm />
   </div>
 </template>
 
 <script>
-import SimpleForm from '@/views/SimpleForm'
-import ComponentsForm from '@/views/ComponentsForm'
+import LoginForm from '@/views/LoginForm'
 
 export default {
-  components: { SimpleForm, ComponentsForm }
+  components: { LoginForm }
 }
 </script>
 
@@ -204,6 +199,7 @@ textarea {
 [type="text"],
 [type="number"],
 [type="search"],
+[type="email"],
 [type="password"] {
   height: 52px;
   width: 100%;
@@ -213,6 +209,7 @@ textarea {
 [type="text"]:focus,
 [type="number"]:focus,
 [type="search"]:focus,
+[type="email"]:focus,
 [type="password"]:focus {
   border-color: #39b982;
 }
