@@ -1,38 +1,41 @@
 <template>
   <div>
     <h1>Create an Event</h1>
-    <form @submit.prevent="createEvent">
+    <form>
       <BaseSelect
         label="Select a category"
         :options="categories"
-        v-model="event.category"
-        error="This field is required"
+        v-model=""
+        :error=""
       />
 
       <h3>Name & describe your event</h3>
       <BaseInput
         label="Title"
-        v-model="event.title"
+        v-model=""
+        :error=""
         type="text"
-        error="This field is required"
       />
 
       <BaseInput
         label="Description"
-        v-model="event.description"
+        v-model=""
+        :error=""
         type="text"
       />
 
       <h3>Where is your event?</h3>
       <BaseInput
         label="Location"
-        v-model="event.location"
+        v-model=""
+        :error=""
         type="text"
       />
 
       <h3>Are pets allowed?</h3>
       <BaseRadioGroup
-        v-model="event.pets"
+        v-model=""
+        :error=""
         name="pets"
         :options="[
           { value: 1, label: 'Yes' },
@@ -43,7 +46,8 @@
       <template v-if="event.pets === 0">
         <h3>Are you sure? 🐶</h3>
         <BaseRadioGroup
-          v-model="event.petsagain"
+          v-model=""
+          :error=""
           name="petsagain"
           :options="[
             { value: 1, label: 'Yes' },
@@ -56,14 +60,16 @@
       <div>
         <BaseCheckbox
           label="Catering"
-          v-model="event.extras.catering"
+          v-model=""
+          :error=""
         />
       </div>
 
       <div>
         <BaseCheckbox
           label="Live music"
-          v-model="event.extras.music"
+          v-model=""
+          :error=""
         />
       </div>
 
@@ -77,41 +83,31 @@
         </BaseButton>
       </div>
     </form>
-
-    <pre>{{ event }}</pre>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      categories: [
-        'sustainability',
-        'nature',
-        'animal welfare',
-        'housing',
-        'education',
-        'food',
-        'community'
-      ],
-      event: {
-        category: '',
-        title: '',
-        description: '',
-        location: '',
-        pets: 1,
-        extras: {
-          catering: false,
-          music: false
-        }
-      }
+  setup () {
+    const required = value => {
+      const requiredMessage = 'This field is required'
+      if (value === undefined || value === null) return requiredMessage
+      if (!String(value).length) return requiredMessage
+
+      return true
     }
-  },
-  methods: {
-    createEvent () {
-      console.log('submit')
+
+    const minLength = (number, value) => {
+      if (String(value).length < number) return 'Please type at least ' + number + ' characters'
+
+      return true
     }
+
+    const anything = () => {
+      return true
+    }
+
+    return {}
   }
 }
 </script>
