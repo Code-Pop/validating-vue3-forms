@@ -10,7 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vee-validate": "next",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
