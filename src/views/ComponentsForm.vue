@@ -75,7 +75,7 @@
 
 <script>
 import { useField, useForm } from 'vee-validate'
-import * as yup from 'yup'
+import { object, string, number, boolean } from 'yup'
 
 export default {
   data () {
@@ -92,14 +92,14 @@ export default {
     }
   },
   setup () {
-    const validationSchema = yup.object({
-      category: yup.string().required(),
-      title: yup.string().required('A cool title is required').min(3),
-      description: yup.string().required(),
-      location: yup.string(),
-      pets: yup.number(),
-      catering: yup.boolean(),
-      music: yup.boolean()
+    const validationSchema = object({
+      category: string().required(),
+      title: string().required('A cool title is required').min(3),
+      description: string().required(),
+      location: string(),
+      pets: number(),
+      catering: boolean(),
+      music: boolean()
     })
 
     const { handleSubmit, errors } = useForm({
