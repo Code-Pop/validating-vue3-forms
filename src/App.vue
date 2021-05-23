@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <ComponentsForm />
+    <LoginForm />
   </div>
 </template>
 
 <script>
-import ComponentsForm from '@/views/ComponentsForm'
+import LoginForm from '@/views/LoginForm'
 
 export default {
-  components: { ComponentsForm }
+  components: { LoginForm }
 }
 </script>
 
