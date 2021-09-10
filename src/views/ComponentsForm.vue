@@ -43,19 +43,6 @@
         ]"
       />
 
-      <template v-if="event.pets === 0">
-        <h3>Are you sure? 🐶</h3>
-        <BaseRadioGroup
-          v-model=""
-          :error=""
-          name="petsagain"
-          :options="[
-            { value: 1, label: 'Yes' },
-            { value: 0, label: 'No' }
-          ]"
-        />
-      </template>
-
       <h3>Extras</h3>
       <div>
         <BaseCheckbox
