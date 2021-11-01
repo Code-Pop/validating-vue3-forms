@@ -29,7 +29,7 @@ export default {
       alert('Submitted')
     }
 
-    const { value: email, errorMessage: emailError } = useField('email', (value) {
+    const { value: email, errorMessage: emailError } = useField('email', function (value) {
       if (!value) return 'This field is required'
 
       const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
