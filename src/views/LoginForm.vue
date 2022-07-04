@@ -3,8 +3,6 @@
     <BaseInput
       label="Email"
       type="email"
-      v-model="email"
-      :error="emailError"
     />
 
     <BaseInput
