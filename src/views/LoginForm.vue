@@ -1,9 +1,9 @@
 <template>
   <form @submit.prevent="onSubmit">
     <BaseInput
+      v-model="email"
       label="Email"
       type="email"
-      v-model="email"
       :error="emailError"
     />
 
