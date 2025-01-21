@@ -10,25 +10,25 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vee-validate": "next",
-    "vue": "^3.0.0"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-standard": "^5.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.1",
+    "@babel/eslint-parser": "^7.26.5",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.5.13",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "next",
+    "eslint-plugin-vue": "^9.32.0",
     "lodash": "^4.17.15",
+    "prettier": "^3.4.2",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vue-next": "^0.1.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-eslint-parser": "^9.4.3"
   }
 }
