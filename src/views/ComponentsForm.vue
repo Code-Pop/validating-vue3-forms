@@ -3,31 +3,31 @@
     <h1>Create an Event</h1>
     <form>
       <BaseSelect
+        v-model=""
         label="Select a category"
         :options="categories"
-        v-model=""
         :error=""
       />
 
       <h3>Name & describe your event</h3>
       <BaseInput
-        label="Title"
         v-model=""
+        label="Title"
         :error=""
         type="text"
       />
 
       <BaseInput
-        label="Description"
         v-model=""
+        label="Description"
         :error=""
         type="text"
       />
 
       <h3>Where is your event?</h3>
       <BaseInput
-        label="Location"
         v-model=""
+        label="Location"
         :error=""
         type="text"
       />
@@ -46,16 +46,16 @@
       <h3>Extras</h3>
       <div>
         <BaseCheckbox
-          label="Catering"
           v-model=""
+          label="Catering"
           :error=""
         />
       </div>
 
       <div>
         <BaseCheckbox
-          label="Live music"
           v-model=""
+          label="Live music"
           :error=""
         />
       </div>
