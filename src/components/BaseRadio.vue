@@ -1,9 +1,9 @@
 <template>
   <input
-      type="radio"
       v-bind="{ ...$attrs, onChange: updateValue }"
-      :checked="modelValue === value"
       :id="uuid"
+      type="radio"
+      :checked="modelValue === value"
     />
   <label
     v-if="label"
