@@ -7,8 +7,8 @@
       <select v-model="event.category">
         <option
           v-for="option in categories"
-          :value="option"
           :key="option"
+          :value="option"
           :selected="option === event.category"
         >{{ option }}</option>
       </select>
@@ -44,8 +44,8 @@
       <h3>Are pets allowed?</h3>
       <div>
         <input
-            type="radio"
             v-model="event.pets"
+            type="radio"
             :value="1"
             name="pets"
           />
@@ -54,8 +54,8 @@
 
       <div>
         <input
-          type="radio"
           v-model="event.pets"
+          type="radio"
           :value="0"
           name="pets"
         />
@@ -65,8 +65,8 @@
       <h3>Extras</h3>
       <div>
         <input
-          type="checkbox"
           v-model="event.extras.catering"
+          type="checkbox"
           class="field"
         />
         <label>Catering</label>
@@ -74,8 +74,8 @@
 
       <div>
         <input
-          type="checkbox"
           v-model="event.extras.music"
+          type="checkbox"
           class="field"
         />
         <label>Live music</label>
