@@ -6,21 +6,21 @@
     {{ label }}
   </label>
   <select
-    class="field"
     v-bind="{
       ...$attrs,
       onChange: updateValue
     }"
-    :value="modelValue"
     :id="uuid"
+    class="field"
+    :value="modelValue"
     :aria-describedby="error ? `${uuid}-error` : null"
     :aria-invalid="error ? true : false"
     :class="{ error }"
   >
     <option
       v-for="option in options"
-      :value="option"
       :key="option"
+      :value="option"
       :selected="option === modelValue"
     >
       {{ option }}

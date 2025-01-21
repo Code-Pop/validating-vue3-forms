@@ -3,30 +3,30 @@
     <h1>Create an Event</h1>
     <form @submit.prevent="createEvent">
       <BaseSelect
+        v-model="event.category"
         label="Select a category"
         :options="categories"
-        v-model="event.category"
         error="This field is required"
       />
 
       <h3>Name & describe your event</h3>
       <BaseInput
-        label="Title"
         v-model="event.title"
+        label="Title"
         type="text"
         error="This field is required"
       />
 
       <BaseInput
-        label="Description"
         v-model="event.description"
+        label="Description"
         type="text"
       />
 
       <h3>Where is your event?</h3>
       <BaseInput
-        label="Location"
         v-model="event.location"
+        label="Location"
         type="text"
       />
 
@@ -55,15 +55,15 @@
       <h3>Extras</h3>
       <div>
         <BaseCheckbox
-          label="Catering"
           v-model="event.extras.catering"
+          label="Catering"
         />
       </div>
 
       <div>
         <BaseCheckbox
-          label="Live music"
           v-model="event.extras.music"
+          label="Live music"
         />
       </div>
 
