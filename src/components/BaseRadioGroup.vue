@@ -1,17 +1,17 @@
 <template>
   <div>
     <component
+      :is="vertical ? 'div' : 'span'"
       v-for="opts in options"
       :key="opts.value"
-      :is="vertical ? 'div' : 'span'"
       :style="vertical ? '' : 'margin-right: 20px;'"
     >
       <BaseRadio
         :name="name"
         :label="opts.label"
-        :modelValue="modelValue"
+        :model-value="modelValue"
         :value="opts.value"
-        @update:modelValue="$emit('update:modelValue', $event)"
+        @update:model-value="$emit('update:modelValue', $event)"
       />
     </component>
   </div>
