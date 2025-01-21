@@ -1,8 +1,8 @@
 <template>
   <p
+    :id="id"
     aria-live="assertive"
     class="errorMessage"
-    :id="id"
   >
     <slot />
   </p>
