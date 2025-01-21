@@ -4,14 +4,14 @@
       label="Email"
       type="email"
       :error="emailError"
-      :modelValue="email"
+      :model-value="email"
       @change="handleChange"
     />
 
     <BaseInput
+      v-model="password"
       label="Password"
       type="password"
-      v-model="password"
       :error="passwordError"
     />
 

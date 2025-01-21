@@ -3,59 +3,59 @@
     <h1>Create an Event</h1>
     <form @submit.prevent="submit">
       <BaseSelect
+        v-model="category"
         label="Select a category"
         :options="categories"
-        v-model="category"
         :error="errors.category"
       />
 
       <h3>Name & describe your event</h3>
       <BaseInput
+        v-model="title"
         label="Title"
         type="text"
-        v-model="title"
         :error="errors.title"
       />
 
       <BaseInput
+        v-model="description"
         label="Description"
         type="text"
-        v-model="description"
         :error="errors.description"
       />
 
       <h3>Where is your event?</h3>
       <BaseInput
+        v-model="location"
         label="Location"
         type="text"
-        v-model="location"
         :error="errors.location"
       />
 
       <h3>Are pets allowed?</h3>
       <BaseRadioGroup
+        v-model="pets"
         name="pets"
         :options="[
           { value: 1, label: 'Yes' },
           { value: 0, label: 'No' }
         ]"
-        v-model="pets"
         :error="errors.pets"
       />
 
       <h3>Extras</h3>
       <div>
         <BaseCheckbox
-          label="Catering"
           v-model="catering"
+          label="Catering"
           :error="errors.catering"
         />
       </div>
 
       <div>
         <BaseCheckbox
-          label="Live music"
           v-model="music"
+          label="Live music"
           :error="errors.music"
         />
       </div>
@@ -78,19 +78,6 @@ import { useField, useForm } from 'vee-validate'
 import { object, string, number, boolean } from 'yup'
 
 export default {
-  data () {
-    return {
-      categories: [
-        'sustainability',
-        'nature',
-        'animal welfare',
-        'housing',
-        'education',
-        'food',
-        'community'
-      ]
-    }
-  },
   setup () {
     const validationSchema = object({
       category: string().required(),
@@ -133,6 +120,19 @@ export default {
       music,
       submit,
       errors
+    }
+  },
+  data () {
+    return {
+      categories: [
+        'sustainability',
+        'nature',
+        'animal welfare',
+        'housing',
+        'education',
+        'food',
+        'community'
+      ]
     }
   }
 }
