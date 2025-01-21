@@ -1,14 +1,14 @@
 <template>
   <input
     v-bind="{ ...$attrs, onChange: updateValue }"
-    :checked="modelValue"
     :id="uuid"
+    :checked="modelValue"
     type="checkbox"
     class="field"
   />
   <label
-    :for="uuid"
     v-if="label"
+    :for="uuid"
   >
     {{ label }}
   </label>

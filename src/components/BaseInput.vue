@@ -6,12 +6,12 @@
     {{ label }}
   </label>
   <input
-    class="field"
     v-bind="{
       ...$attrs,
       onInput: updateValue
     }"
     :id="uuid"
+    class="field"
     :value="modelValue"
     :placeholder="label"
     :aria-describedby="error ? `${uuid}-error` : null"
